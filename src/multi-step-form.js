@@ -310,7 +310,7 @@
         form.validateView = function(view) {
             var index = form.views.index(view);
 
-            if (form.validate().subset(view)) {
+            if (form.validate(settings.validate).subset(view)) {
                 $.data(view, msfJqueryData.validated, true);
                 form.setStatusCssClass(form.steps[index], msfCssClasses.statuses.stepComplete);
                 return true;
